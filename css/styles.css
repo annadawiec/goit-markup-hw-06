@@ -432,24 +432,14 @@ body {
   padding-right: 30px;
 }
 
-.footer-phone:hover {
+.footer-phone:hover,
+.footer-phone:focus {
   color: var(--main-background); /* CSS for FOOTER*/
   transition-duration: 250ms;
   transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
 }
 
-.footer-phone:focus {
-  color: var(--main-background);
-  transition-duration: 250ms;
-  transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
-} /* CSS for FOOTER*/
-
-.footer-mail:hover {
-  color: var(--main-background);
-  transition-duration: 250ms;
-  transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
-} /* CSS for FOOTER*/
-
+.footer-mail:hover,
 .footer-mail:focus {
   color: var(--main-background);
   transition-duration: 250ms;
@@ -790,13 +780,37 @@ body {
 .newsletter-btn {
   width: 200px;
   height: 50px;
+  cursor: pointer;
+  border-radius: 4px;
+  border: 0px;
+  filter: drop-shadow(0px 4px 4px rgba(0, 0, 0, 0.25));
   background-color: var(--main-blue);
-  color: var(--main-background);
+  position: absolute;
+  margin-left: 12px;
+  margin-bottom: 30px;
+}
+
+.newsletter-btn:hover,
+.newsletter-btn:active {
+  box-shadow: 0px 1px 1px rgba(0, 0, 0, 0.12), 0px 4px 4px rgba(0, 0, 0, 0.06),
+    1px 4px 6px rgba(0, 0, 0, 0.16);
+  transition-duration: 250ms;
+  transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.newsletter-sign {
+  margin-bottom: 20px;
   letter-spacing: 0.06em;
   font-weight: 700px;
   font-size: 16px;
-  line-height: 30px;
-  margin-left: 12px;
+  color: var(--main-background);
+}
+
+.icon-newsletter {
+  fill: #ececee;
+  position: relative;
+  margin-left: 24px;
+  margin-top: 13px;
 }
 
 .newsletter-email {
@@ -804,6 +818,10 @@ body {
   width: 358px;
   padding-left: 16px;
   font-weight: 400px;
+  border-radius: 4px;
+  letter-spacing: 0.03em;
+  color: var(--footer-mail);
+  border: 1px solid rgba(255, 255, 255, 0.3);
 }
 
 .sign-up {
@@ -811,40 +829,126 @@ body {
 }
 
 /**CSS for modal**/
-.input {
-  width: 448px;
-  height: 40px;
-  border: 1px solid;
-  border-radius: 4px;
+
+.form-labels {
+  color: var(--contact-color);
+  font-weight: 400;
+  font-size: 12px;
+  line-height: 14px;
+  letter-spacing: 0.01em;
+  margin-bottom: 4px;
 }
 
 .icon-modal {
   position: absolute;
   fill: #000000;
+  bottom: 11px;
+  left: 15px;
+  transition-property: fill;
+  transition-duration: 250ms;
+  transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
 }
 
-.form-labels {
+.icon-modal:focus {
+  fill: var(--main-blue);
+}
+
+label {
+  display: flex;
+  flex-direction: column;
+  margin-bottom: 10px;
+  margin-left: 40px;
   position: relative;
+}
+
+.input {
+  width: 448px;
+  height: 40px;
+  border: 1px solid rgba(33, 33, 33, 0.2);
+  border-radius: 4px;
+  margin-bottom: 4px;
+  padding-left: 42px;
+  transition-property: border-color;
+}
+.input:focus {
+  border-color: var(--main-blue);
+  transition-duration: 250ms;
+  transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 .legend {
   font-weight: 700;
   font-size: 20px;
+  text-align: center;
   margin-top: 40px;
   margin-left: 40px;
+  margin-right: 40px;
   margin-bottom: 12px;
 }
 
 .textera {
   width: 448px;
   height: 120px;
+  resize: none;
+  border: 1px solid rgba(33, 33, 33, 0.2);
+  font-weight: 400;
+  font-size: 12px;
+  line-height: 14px;
+  letter-spacing: 0.01em;
+  color: rgba(117, 117, 117, 0.5);
+  padding-top: 12px;
+  padding-left: 16px;
+  transition-property: border-color;
+  transition-duration: 250ms;
+  transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.textera:focus {
+  border-color: var(--main-blue);
 }
 
 .submit {
   color: var(--main-background);
-  background-color: var(--main-blue);
-  position: absolute;
+  border-radius: 4px;
+  font-weight: 700;
+  font-size: 16px;
+  line-height: 30px;
+  letter-spacing: 0.06em;
   width: 200px;
   height: 50px;
+  cursor: pointer;
+  border-radius: 4px;
+  border: none;
   filter: drop-shadow(0px 4px 4px rgba(0, 0, 0, 0.25));
+  background-color: var(--main-blue);
+  position: absolute;
+  margin-left: 164px;
+  margin-bottom: 40px;
+}
+
+.contact-form {
+  margin-left: 40px;
+}
+
+.checkbox-text {
+  font-weight: 400;
+  font-size: 14px;
+  line-height: 24px;
+  letter-spacing: 0.03em;
+  color: var(--contact-color);
+  display: line;
+}
+
+.regulations {
+  color: var(--main-blue);
+  cursor: pointer;
+}
+
+.regulations:hover,
+.regulations:focus,
+.regulations:active,
+.regulations:visited {
+  color: var(--main-blue);
+  transition-duration: 250ms;
+  transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
 }
