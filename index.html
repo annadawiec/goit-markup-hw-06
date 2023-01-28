@@ -578,14 +578,24 @@
               placeholder="Wprowadź tekst"
             ></textarea>
           </label>
-          <label>
-            <input type="checkbox" name="hobby" value="music" />
-            <span class="checkbox-text">
-              Oświadczam iż akceptuję
-              <a href="" class="regulations"> Regulamin </a> i
-              <a href="" class="regulations">Politykę Prywatności.</a>
-            </span>
-          </label>
+          <div class="terms">
+            <input
+              id="terms-input"
+              type="checkbox"
+              name="checkbox"
+              value="true"
+              required
+              class="terms-checkbox"
+            />
+
+            <label for="terms-input" class="modal-form-checkbox">
+              <p class="checkbox-text">
+                Oświadczam iż akceptuję
+                <a href="" class="regulations"> Regulamin </a> i
+                <a href="" class="regulations">Politykę Prywatności.</a>
+              </p>
+            </label>
+          </div>
           <button type="submit" class="submit">Wyślij</button>
         </form>
       </div>
