@@ -70,6 +70,7 @@
 .header-logo > .logo {
   width: 145px; /* CSS for HEADER */
   height: 31px;
+  padding-right: 50px;
 }
 
 .nav-menu {
@@ -88,10 +89,10 @@
   line-height: 1.17;
   color: var(--main-color); /* CSS for HEADER */
   justify-content: space-between;
-  padding-left: 93px;
+  padding-left: 43px;
 }
 
-.web-navigation:hover {
+.navigation .web-navigation:hover {
   color: var(--main-blue);
   transition-duration: 250ms;
   transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
@@ -893,10 +894,13 @@ label {
   padding-left: 42px;
   transition-property: border-color;
 }
-.input:focus {
+
+.input:focus,
+.input:hover {
   border-color: var(--main-blue);
   transition-duration: 250ms;
   transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+  outline: none;
 }
 
 .legend {
@@ -926,8 +930,10 @@ label {
   transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
 }
 
-.textera:focus {
+.textera:focus,
+.textera:hover {
   border-color: var(--main-blue);
+  outline: none;
 }
 
 .submit {
